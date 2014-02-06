@@ -50,6 +50,11 @@ symbol_table['+'] = function(...)
   push(a + b)
 end -- '+'
 
+symbol_table['/'] = function(...)
+  local a, b = pop(2)
+  push(a / b)
+end -- '/'
+
 symbol_table['.'] = function(...)
   io.write(tostring(pop()), " ")
 end -- '.'
