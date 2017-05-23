@@ -15,6 +15,10 @@ Feature: The Forth interpreter shall understand basic operations
      When I execute "3 4 * ."
      Then I should get "12 ok"
 
+  Scenario: Neg
+     When I execute "1 neg ."
+     Then I should get "-1 ok"
+
   Scenario: Duplication
      When I execute "1 DUP . ."
      Then I should get "1 1 ok"
