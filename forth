@@ -42,6 +42,11 @@ symbol_table['-'] = function(...)
   push(a - b)
 end -- '-'
 
+symbol_table['neg'] = function(...)
+  local a = pop(1)
+  push(-a)
+end -- 'neg'
+
 symbol_table['+'] = function(...)
   local a, b = pop(2)
   push(a + b)
