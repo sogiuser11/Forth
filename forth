@@ -58,8 +58,14 @@ end -- '+'
 symbol_table['/'] = function(...)
   local a, b = pop(2)
     assert(b > 0, "Divide by 0")
-  push(a / b)
+push(math.floor(a / b))
+--  push(a / b)
 end -- '/'
+
+symbol_table.NEG = function(...)
+  local a = pop()
+  push(a * -1)
+end -- DUP
 
 symbol_table['.'] = function(...)
   io.write(tostring(pop()), " ")
