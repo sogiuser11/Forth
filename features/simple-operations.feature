@@ -26,3 +26,8 @@ Feature: The Forth interpreter shall understand basic operations
   Scenario: Division
      When I execute "5 2 / ."
      Then I should get "2.5 ok"
+
+  Scenario: Division
+     When I execute "5 0 / ."
+     Then I should receive the error "Divide by 0"
+

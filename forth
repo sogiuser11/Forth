@@ -57,6 +57,7 @@ end -- '+'
 
 symbol_table['/'] = function(...)
   local a, b = pop(2)
+    assert(b > 0, "Divide by 0")
   push(a / b)
 end -- '/'
 
